@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial=scale1.0">
+<meta http-equiv="X-UA-Compatible" content="ie-edger">
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<title>Vem de zap</title>
+</head>
+    <body>
+        <div onclick="mandazap(this)">
+            <p>Bom dia luz do dia!</p>
+            <img src="Whatsapp-logo.png">
+        </div>
+        <div onclick="mandazap(this)">
+            <p>Saudades de Voce!</p>
+            <img src="Whatsapp-logo.png">
+        </div>
+        <div onclick="mandazap(this)">
+            <p>Onde você esta?</p>
+            <img src="Whatsapp-logo.png">
+        </div>
+        <div onclick="mandazap(this)">
+            <p>Presciso conversar Urgente!</p>
+            <img src="Whatsapp-logo.png">
+        </div>
+        <div onclick="mandazap(this)">
+            <p>Qual sua Disponibilidade para Hoje?</p>
+            <img src="Whatsapp-logo.png">
+        </div>
+        <div onclick="mandazap(this)">
+            <p>O que você esta fazendo?</p>
+            <img src="Whatsapp-logo.png">
+        </div>
+    <script>
+        function mandazap(elemento) {
+            console.log(elemento.firstElementChild.innerText);
+            let texto = elemento.firstElementChild.innerText;
+            let numero = prompt("Qual numero?");
+            let zaplink = `https://api.whatsapp.com/send?phone=55 ${numero}&text=${texto}`;
+        window.open(zaplink);
+        }
+    </script>
+    </body>
+</html>
